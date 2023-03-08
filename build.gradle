@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.config-manager'
+version ''
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.changeconfig.Main', 'name': 'config-manager'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
